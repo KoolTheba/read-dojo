@@ -6,7 +6,14 @@
   "scripts": {
     "test": "jest  --verbose ./**/*.test.js",
     "test:coverage": "jest --verbose ./**/*.test.js --coverage",
-    "test:watch": "jest --verbose ./**/*.test.js --watchAll"
+    "test:watch": "jest --verbose ./**/*.test.js --watchAll",
+    "lint": "standard",
+    "lint:fix": "standard --fix"
+  },
+  "standard": {
+    "env": [
+      "jest"
+    ]
   },
   "repository": {
     "type": "git",
@@ -20,6 +27,7 @@
   "homepage": "https://github.com/KoolTheba/read-dojo#readme",
   "devDependencies": {},
   "dependencies": {
-    "jest": "^26.2.2"
+    "jest": "^26.2.2",
+    "standard": "^14.3.4"
   }
 }
