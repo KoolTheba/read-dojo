@@ -4,6 +4,7 @@
   "description": "Keep track of all your awesomical urls and read-your-things like a pro",
   "main": "index.js",
   "scripts": {
+    "start": "node index",
     "test": "jest  --verbose ./**/*.test.js",
     "test:coverage": "jest --verbose ./**/*.test.js --coverage",
     "test:watch": "jest --verbose ./**/*.test.js --watchAll",
