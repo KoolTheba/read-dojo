@@ -4,12 +4,14 @@
   "description": "Keep track of all your awesomical urls and read-your-things like a pro",
   "main": "index.js",
   "scripts": {
+    "start": "node index",
     "test": "jest  --verbose ./**/*.test.js",
     "test:coverage": "jest --verbose ./**/*.test.js --coverage",
     "test:watch": "jest --verbose ./**/*.test.js --watchAll",
     "lint": "standard",
     "lint:fix": "standard --fix",
-    "dev": "nodemon ./lib/index.js"
+    "dev": "nodemon ./lib/index.js",
+    "debug": "DEBUG=* node index"
   },
   "standard": {
     "env": [
@@ -28,9 +30,13 @@
   "homepage": "https://github.com/KoolTheba/read-dojo#readme",
   "devDependencies": {},
   "dependencies": {
+    "debug": "^4.1.1",
     "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "helmet": "^4.0.0",
     "jest": "^26.2.2",
     "nodemon": "^2.0.4",
-    "standard": "^14.3.4"
+    "standard": "^14.3.4",
+    "supertest": "^4.0.2"
   }
 }
