@@ -8,7 +8,8 @@
     "test:coverage": "jest --verbose ./**/*.test.js --coverage",
     "test:watch": "jest --verbose ./**/*.test.js --watchAll",
     "lint": "standard",
-    "lint:fix": "standard --fix"
+    "lint:fix": "standard --fix",
+    "dev": "nodemon ./lib/index.js"
   },
   "standard": {
     "env": [
@@ -28,6 +29,7 @@
   "devDependencies": {},
   "dependencies": {
     "jest": "^26.2.2",
+    "nodemon": "^2.0.4",
     "standard": "^14.3.4"
   }
 }
