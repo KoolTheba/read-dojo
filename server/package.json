@@ -11,7 +11,9 @@
     "lint": "standard",
     "lint:fix": "standard --fix",
     "dev": "nodemon ./lib/index.js",
-    "debug": "DEBUG=* node index"
+    "debug": "DEBUG=* node index",
+    "infra:start": "docker-compose up -d",
+    "infra:stop": "docker-compose down"
   },
   "standard": {
     "env": [
