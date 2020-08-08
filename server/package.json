@@ -4,7 +4,9 @@
   "description": "Keep track of all your awesomical urls and read-your-things like a pro",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest  --verbose ./**/*.test.js",
+    "test:coverage": "jest --verbose ./**/*.test.js --coverage",
+    "test:watch": "jest --verbose ./**/*.test.js --watchAll"
   },
   "repository": {
     "type": "git",
@@ -15,5 +17,9 @@
   "bugs": {
     "url": "https://github.com/KoolTheba/read-dojo/issues"
   },
-  "homepage": "https://github.com/KoolTheba/read-dojo#readme"
+  "homepage": "https://github.com/KoolTheba/read-dojo#readme",
+  "devDependencies": {},
+  "dependencies": {
+    "jest": "^26.2.2"
+  }
 }
