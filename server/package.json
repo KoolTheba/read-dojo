@@ -1,0 +1,36 @@
+{
+  "name": "read-dojo-server",
+  "version": "1.0.0",
+  "description": "Keep track of all your awesomical urls and read-your-things like a pro",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest  --verbose ./**/*.test.js",
+    "test:coverage": "jest --verbose ./**/*.test.js --coverage",
+    "test:watch": "jest --verbose ./**/*.test.js --watchAll",
+    "lint": "standard",
+    "lint:fix": "standard --fix",
+    "dev": "nodemon ./lib/index.js"
+  },
+  "standard": {
+    "env": [
+      "jest"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KoolTheba/read-dojo.git"
+  },
+  "author": "Theba Gomez",
+  "license": "AGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/KoolTheba/read-dojo/issues"
+  },
+  "homepage": "https://github.com/KoolTheba/read-dojo#readme",
+  "devDependencies": {},
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "jest": "^26.2.2",
+    "nodemon": "^2.0.4",
+    "standard": "^14.3.4"
+  }
+}
