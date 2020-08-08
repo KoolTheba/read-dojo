@@ -28,6 +28,7 @@
   "homepage": "https://github.com/KoolTheba/read-dojo#readme",
   "devDependencies": {},
   "dependencies": {
+    "dotenv": "^8.2.0",
     "jest": "^26.2.2",
     "nodemon": "^2.0.4",
     "standard": "^14.3.4"
