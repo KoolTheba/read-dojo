@@ -37,6 +37,7 @@
     "express": "^4.17.1",
     "helmet": "^4.0.0",
     "jest": "^26.2.2",
+    "mongoose": "^5.9.28",
     "nodemon": "^2.0.4",
     "standard": "^14.3.4",
     "supertest": "^4.0.2"
