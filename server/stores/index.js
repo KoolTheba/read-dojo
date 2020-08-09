@@ -1,16 +1,20 @@
 const mongoose = require('mongoose')
-const dbName = process.env.DB_NAME
-const dbUrl = process.env.DB_URL
 const Resource = require('./models/resource')
+const debug = require('debug')('read-dojo:store')
 
-mongoose.connect(`mongodb://${dbUrl}/${dbName}`, {
-  keepAlive: true,
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-})
-mongoose.set('debug', true)
-mongoose.set('useCreateIndex', true)
+const dbInit = async (dbUrl, dbName) => {
+  debug('Initializing mongodb connection')
+  mongoose.set('debug', true)
+  mongoose.set('useCreateIndex', true)
+  mongoose.Promise = Promise
 
-mongoose.Promise = Promise
+  await mongoose.connect(`mongodb://${dbUrl}/${dbName}`, {
+    keepAlive: true,
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+  })
 
-module.exports = { Resource }
+  debug('mongodb has been initialized succesfully!')
+}
+
+module.exports = { Resource, dbInit }
