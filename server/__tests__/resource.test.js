@@ -13,11 +13,7 @@ afterAll(resetDb)
 describe('STORE: resource model', () => {
   describe('create', () => {
     test('Should store a new resource', async () => {
-      const resourceData = {
-        url: 'https://stackoverflow.com/',
-        title: 'Stackoverflow community'
-      }
-
+      const resourceData = fixtures.createResourceData
       const createdResource = await Resource.create(resourceData)
       expect(createdResource.url).toEqual(resourceData.url)
       expect(createdResource.title).toEqual(resourceData.title)
@@ -30,7 +26,6 @@ describe('STORE: resource model', () => {
     })
 
     test('Should not store a new resource if data is wrong', async () => {
-
       try {
         await Resource.create(emptyData)
       } catch (e) {
@@ -73,7 +68,7 @@ describe('STORE: resource model', () => {
       await addResources()
       const updatedResource = await Resource.update(
         fixtures.resourceValidId,
-        { title: 'new title' }
+        fixtures.updateResourceData
       )
       expect(updatedResource.title).toEqual('new title')
 
@@ -85,7 +80,7 @@ describe('STORE: resource model', () => {
       await addResources()
       const updatedResource = await Resource.update(
         fixtures.resourceUselessId,
-        { title: 'new title' }
+        fixtures.updateResourceData
       )
       expect(updatedResource).toEqual(null)
 

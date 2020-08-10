@@ -17,6 +17,13 @@ module.exports = {
   fixtures: {
     resourceList,
     resourceValidId,
-    resourceUselessId
+    resourceUselessId,
+    createResourceData: {
+      url: 'https://stackoverflow.com/',
+      title: 'Stackoverflow community'
+    },
+    updateResourceData: {
+      title: 'new title'
+    },
   }
 }
