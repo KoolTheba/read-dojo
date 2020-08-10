@@ -1,4 +1,5 @@
 const resourceModel = require('../../stores/schemas/resource')
+const { errorsDescription: errors } = require('../../utils')
 
 const resourceValidId = '1b9d6bcd-bbfd-4b2d-9b5d-ab8dfbbd4bed'
 const resourceUselessId = '9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb6d'
@@ -25,5 +26,6 @@ module.exports = {
     updateResourceData: {
       title: 'new title'
     },
+    errors
   }
 }
